@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Store</title>
+
+</head>
+<body>
+  <form method="POST" action="" enctype="multipart/form-data" >
+                                {{ form.hidden_tag() }}
+                                {{ form.name }}
+                                {{ form.image }}
+                                {{ form.submit }}
+</form>
+
+{% for x in store %}
+    <hr>
+    <br>
+    <br>
+{{x.name}}
+    <br>
+    <br>
+    <img alt="" height="200" width='200' src="{{  url_for('static', filename= '/' + x.image) }}">
+{% endfor %}
+</body>
+</html>
