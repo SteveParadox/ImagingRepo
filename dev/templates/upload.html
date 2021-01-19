@@ -1,17 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Store</title>
+<html>
+    <head>
+        <title>Store</title>
+        {{ dropzone.load() }}
+        {{ dropzone.style('border: 2px dashed #0087F7; border-radius:30px; margin: 3%; min-height: 200px;') }}
+    </head>
+    <body>
 
-</head>
-<body>
-  <form method="POST" action="" enctype="multipart/form-data" >
-                                {{ form.hidden_tag() }}
-                                {{ form.name }}
-                                {{ form.image }}
-                                {{ form.submit }}
-</form>
+        <h1 align="center">Upload</h1>
+        {{ dropzone.create(action_view='load.upload') }}
+
 
 {% for x in store %}
     <hr>
