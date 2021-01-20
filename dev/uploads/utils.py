@@ -1,10 +1,11 @@
+# importing libraries
 import os
 import secrets
 
 
 from flask import current_app
 
-
+# processing and saving uploaded images to assigned directory
 def save_img(form_photo):
     if form_photo:
         random_hex = secrets.token_hex(8)

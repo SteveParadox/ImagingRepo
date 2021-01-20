@@ -3,7 +3,12 @@
 
  <form method="POST" action="" enctype="multipart/form-data" >
     {{ form.hidden_tag() }}
+    {{form.name.label()}}:
     {{ form.name }}
+    <br>
+    <br>
+    {{form.password.label()}}:
     {{ form.password}}
+    <br>
     {{ form.submit }}
 </form> 

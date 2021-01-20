@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>Store</title>
         {{ dropzone.load() }}
@@ -10,15 +10,16 @@
         <h1 align="center">Upload</h1>
         {{ dropzone.create(action_view='load.upload') }}
 
+        <a href="{{ url_for('load.deleteAll') }}"> <button type="submit">Delete all my Photos</button></a>
+        <br>
+        <br>
+{% for x in imageAll %}
+    <img alt="" height="200" width='200' src="{{  url_for('static', filename= '' + x.image) }}">
 
-{% for x in store %}
-    <hr>
-    <br>
-    <br>
-{{x.name}}
-    <br>
-    <br>
-    <img alt="" height="200" width='200' src="{{  url_for('static', filename= '/' + x.image) }}">
+    {% if x.data == current_user %}
+   <a href="{{ url_for('load.deleteOne',publicId=x.publicId) }}"> <button type="submit" >Delete</button></a>
+   <span>  &nbsp; &nbsp; &nbsp; &nbsp;     </span>
+   {% endif %}
 {% endfor %}
 </body>
 </html>
