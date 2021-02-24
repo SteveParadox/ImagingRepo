@@ -52,7 +52,7 @@ def login():
 
 
 # uploading images
-@load.route('/upload', methods=['GET', 'POST'])
+@load.route('/', methods=['GET', 'POST'])
 @login_required
 def upload():
     # getting all uploaded images from the database
