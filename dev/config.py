@@ -20,7 +20,7 @@ class Config:
     else:
         SECRET_KEY = "795849f0d2328258710ae9c71cb795849f0d2328258710ae9c71cb4b5ea4b5ea"
         SQLALCHEMY_TRACK_MODIFICATIONS = False
-        SQLALCHEMY_DATABASE_URI = ""
+        SQLALCHEMY_DATABASE_URI = "postgres://wivhavfezhmnia:3fde540c0f2b5744235c6e9d0f181a92101ec85b5fda29b2136d41b3a2873f90@ec2-52-70-67-123.compute-1.amazonaws.com:5432/d8jbm55mvars4k"
         DROPZONE_UPLOAD_MULTIPLE = True
         DROPZONE_ALLOWED_FILE_CUSTOM = True
         DROPZONE_ALLOWED_FILE_TYPE = 'image/*'
